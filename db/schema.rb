@@ -11,11 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140613065854) do
+ActiveRecord::Schema.define(version: 20140616062750) do
 
   create_table "tweet_pollers", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "tweets", force: true do |t|
+    t.string "t_id_str"
+    t.string "created_at"
+    t.string "text"
+    t.string "retweet_count"
+    t.string "retweeted"
+    t.string "user_id_str"
+    t.string "user_name"
+    t.string "user_location"
+    t.string "user_statuses_count"
+    t.string "user_followers_count"
+    t.string "user_friends_count"
+    t.string "stored_at"
   end
 
 end
